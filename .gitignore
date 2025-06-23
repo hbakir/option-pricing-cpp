@@ -1,0 +1,85 @@
+# Ignore build artifacts and IDE files
+
+# CLion
+.idea/
+cmake-build-*/
+CMakeLists.txt.user
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+CTestTestfile.cmake
+
+# Build directories
+build/
+
+# OS generated files
+.DS_Store
+
+# Backup and temporary files
+*~
+*.bak
+*.tmp
+*.orig
+
+# Vim swap and session files
+[._]*.s[a-v][a-z]
+*.swp
+*.swo
+
+# Emacs auto-save and backup files
+\#*\#
+\.\#*
+
+# Ctags
+tags
+TAGS
+ctags.out
+
+# C/C++ object files and libraries
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+*.def
+*.exp
+
+# Shared objects, executables
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Coverage and profiling files
+*.gcno
+*.gcda
+*.gcov
+*.prof
+*.pgo
+
+# Debugging files
+*.dSYM/
+*.ilk
+*.pdb
+
+# IDE directories and files
+.vscode/
+.vs/
+*.VC.db
+*.VC.opendb
+
+# Xcode
+*.xcworkspace
+*.xcuserdatad
+*.xcodeproj
