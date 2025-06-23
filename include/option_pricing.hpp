@@ -13,17 +13,21 @@
 
 #include "sud.hpp"
 
+namespace op {
+
 // Standard normal density function
 inline double n(double x)
 {
-    const double A = 1.0 / std::sqrt(2.0 * 3.14159265358979323846);
+    constexpr double PI = 3.14159265358979323846;
+    const double A = 1.0 / std::sqrt(2.0 * PI);
     return A * std::exp(-x * x * 0.5);
 }
 
 // Cumulative normal distribution using error function
-static inline auto cndN = [](double x) {
+inline double cndN(double x)
+{
     return 0.5 * (1.0 - std::erf(-x / std::sqrt(2.0)));
-};
+}
 
 inline double N(double x)
 {
@@ -156,3 +160,5 @@ public:
         return PutValues(optData, S);
     }
 };
+
+} // namespace op

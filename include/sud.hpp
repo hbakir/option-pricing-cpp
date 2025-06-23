@@ -8,6 +8,8 @@
 #include <tuple>
 #include <functional>
 
+namespace op {
+
 template <typename T>
 using OptionData = std::tuple<T, T, T, T>;
 
@@ -37,3 +39,6 @@ public:
         end();
     }
 };
+
+} // namespace op
+
