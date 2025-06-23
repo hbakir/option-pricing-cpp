@@ -38,12 +38,16 @@ You can implement your own `Source`/`Sink`, write any pricing algorithm (e.g. Bl
 ```
 . ├── CMakeLists.txt        # top-level CMake configuration
   ├── include/
-  │   └── sud.hpp          # core templates and interfaces
+  │   ├── sud.hpp          # core templates and interfaces
+  │   └── option_pricing.hpp # domain logic (Black‑Scholes formulas)
   ├── src/
   │   ├── CMakeLists.txt   # builds all .cpp files in this folder
-  │   └── main.cpp         # application entry-point stub
+  │   └── main.cpp         # application entry-point (demo runner)
+  ├── tests/
+  │   ├── CMakeLists.txt   # tests build rules
+  │   └── test_option_pricing.cpp # unit tests for pricing routines
   └── README.md            # project documentation
-```
+``` 
 
 ## Example Usage
 
@@ -92,6 +96,16 @@ end
 (5.84628,-0.372483,0.0420428)
 end
 ```
+
+## Running Unit Tests
+
+After building (see **Building**), from the `build` directory run:
+
+```bash
+ctest -V
+```
+
+This will execute the `option_pricing` unit tests (normal PDF/CDF checks and basic call/put pricing validations).
 
 ## Getting Started Guide for Java Developers
 

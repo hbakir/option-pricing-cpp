@@ -79,7 +79,16 @@ ctags.out
 *.VC.db
 *.VC.opendb
 
+# Tests artifacts (if building tests in-source)
+tests/CMakeFiles/
+tests/CTestTestfile.cmake
+tests/test_option_pricing
+tests/*.exe
+tests/*.out
+tests/*.o
+
 # Xcode
 *.xcworkspace
 *.xcuserdatad
 *.xcodeproj
+/Testing/

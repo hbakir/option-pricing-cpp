@@ -8,3 +8,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 add_subdirectory(src)
+
+# Enable unit testing with CTest
+include(CTest)
+enable_testing()
+
+add_subdirectory(tests)
